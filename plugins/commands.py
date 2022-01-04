@@ -39,7 +39,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴', url='https://t.me/ivar_bonel'),
+            InlineKeyboardButton('🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴', callback_data='owner'),
             InlineKeyboardButton('🍁ʙᴏᴛ ɢʀᴏᴜᴘ🍁', url='https://t.me/malllumoviesgroups')
             ],[
             InlineKeyboardButton('● ʜᴇʟᴘ ●', callback_data='help'),
@@ -82,7 +82,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴', url='https://t.me/ivar_bonel'),
+            InlineKeyboardButton('🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴', callback_data='owner'),
             InlineKeyboardButton('🍁ʙᴏᴛ ɢʀᴏᴜᴘ🍁', url='https://t.me/malllumoviesgroups')
             ],[
             InlineKeyboardButton('● ʜᴇʟᴘ ●', callback_data='help'),
@@ -210,6 +210,10 @@ async def delete_all_index(bot, message):
         quote=True,
     )
 
+@Client.on_callback_query()
+async def cb_data(bot, message):
+    if message.data == "owner":
+        await await query.answer("✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨\n\n😶‍🌫️ғᴜʟʟ\nɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦\n🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel\n\n🍒ᴄᴏᴜɴᴛʀʏ: I N D I A\n🐾sᴛᴀᴛᴇ: K E R A L A\n\n{query.from_user.first_name} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗", show_alert=True)
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
