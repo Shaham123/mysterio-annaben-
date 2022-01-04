@@ -213,7 +213,7 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query()
 async def cb_data(bot, message):
     if message.data == "owner":
-        await message.answer("✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨\n\n😶‍🌫️ғᴜʟʟ\nɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦\n🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel\n\n🍒ᴄᴏᴜɴᴛʀʏ: I N D I A\n🐾sᴛᴀᴛᴇ: K E R A L A\n\n{query.from_user.first_name} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗", show_alert=True)
+        await message.answer("✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨\n\n😶‍🌫️ғᴜʟʟ\nɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦\n🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel\n\n🍒ᴄᴏᴜɴᴛʀʏ: I N D I A\n🐾sᴛᴀᴛᴇ: K E R A L A\n\n{message.from_user.first_name} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗", show_alert=True)
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
