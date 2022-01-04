@@ -2,7 +2,6 @@ import os
 import logging
 import random
 import asyncio
-import query
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
@@ -212,7 +211,7 @@ async def delete_all_index(bot, message):
     )
 
 @Client.on_callback_query()
-async def cb_data(bot, message):
+async def cb_data(bot, update):
     if message.data == "owner":
         await query.answer("✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨\n\n😶‍🌫️ғᴜʟʟ\nɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦\n🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel\n\n🍒ᴄᴏᴜɴᴛʀʏ: I N D I A\n🐾sᴛᴀᴛᴇ: K E R A L A\n\n{query.from_user.first_name} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗", show_alert=True)
 
