@@ -784,7 +784,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('Ningal chodicha movie ude correct ayittulla name thazhekaanunna correct ayittulla button click cheyyu click cheyyu🤠, I cant find anything related to that\nDid you mean any one of these?🤠', reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply('𝗛𝗲𝗹𝗹𝗼 {} 𝗜 𝗰𝗼𝘂𝗹𝗱 𝗻𝗼𝘁 𝗳𝗶𝗻𝗱 𝘁𝗵𝗲 𝗺𝗼𝘃𝗶𝗲 𝘆𝗼𝘂 𝗮𝘀𝗸𝗲𝗱 𝗳𝗼𝗿...\n\nPlease click the related movie given below in butttons👇\n\n𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨 𝐧𝐨𝐭 𝐫𝐞𝐜𝐞𝐢𝐯𝐞 𝐭𝐡𝐞 𝐦𝐨𝐯𝐢𝐞 𝐞𝐯𝐞𝐧 𝐚𝐟𝐭𝐞𝐫 𝐞𝐧𝐭𝐞𝐫𝐢𝐧𝐠 𝐭𝐡𝐞 𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐧𝐚𝐦𝐞...  @𝐚𝐝𝐦𝐢𝐧 𝐭𝐲𝐩𝐞 𝐦𝐨𝐯𝐢𝐞 𝐧𝐚𝐦𝐞 𝐈𝐧𝐟𝐨𝐫𝐦 𝐭𝐡𝐞 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐟𝐨𝐫𝐦𝐚𝐭.. 𝐖𝐞 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐰𝐢𝐭𝐡𝐢𝐧 𝟐𝟒 𝐡𝐨𝐮𝐫𝐬\n\nസിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ താഴെ കാണുന്ന ബട്ടണിൽ നോക്കി ഉദേഷിച്ചതിൽ ക്ലിക്ക് ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദേശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുള്ളു😊', reply_markup=InlineKeyboardMarkup(btn))
     
 
 
