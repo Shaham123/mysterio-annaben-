@@ -13,6 +13,18 @@ from utils import get_size, is_subscribed, temp
 
 logger = logging.getLogger(__name__)
 
+STARTING_MSG = """
+✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨
+
+😶‍🌫️ғᴜʟʟɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦
+🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel
+
+🍒ᴄᴏᴜɴᴛʀʏ: I N D I A
+🐾sᴛᴀᴛᴇ: K E R A L A
+    
+{} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗
+"""
+
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
@@ -213,7 +225,7 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query()
 async def cb_data(bot, message):
     if message.data == "owner":
-        await message.answer("✨...ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟs...✨\n\n😶‍🌫️ғᴜʟʟɴᴀᴍᴇ :₲Ø₭Ʉ ₴Ø₦\n🍻ᴜsᴇʀɴᴀᴍᴇ: @ivar_bonel\n\n🍒ᴄᴏᴜɴᴛʀʏ: I N D I A\n🐾sᴛᴀᴛᴇ: K E R A L A\n\n{} സാർ എന്നാൽ ഞാൻ അങ്ങോട്ട് പൊയ്ക്കോട്ടെ🤗", show_alert=True)
+        await message.answer(text=STARTING_MSG.format(message.from_user.first_name), show_alert=True)
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
